@@ -1,8 +1,11 @@
 {
 "name" : "DrupalDevChecklist",
 "version" : "0.0.1",
-"description" : "A checklist of Drupal Development Steps for project websites.",
-
+"description" : "A checklist of drupal development steps for project websites.",
+"url" : "https://github.com/tomatkins/drupaldevchecklist",
+"author" : "Tom Atkins",
+"email" : "drupaldevchecklist@gmail.com",
+"license" : "AFL-3.0",
 "dependencies" : {
 	"grunt" : "~0.4.1",
 	"grunt-contrib-watch" : "~0.5.1",

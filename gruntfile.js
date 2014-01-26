@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.loadNpmTasks('grunt-contrib-compass');
 
 	grunt.initConfig({
 		
@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 			    tasks: ['uglify']
 			}, //scripts
 			
-				sass: {
+			sass: {
 				files: ['_/components/sass/*.scss'],
 				tasks: ['compass:dev']
 			}, //sass

@@ -50,6 +50,17 @@ $large: 75em;
     
   }//primary
   
+   // Primary Full - For layouts that fill the whole page (accordions) ------------
+    .primary-full {
+      
+      margin-top: .2em;
+    @include at-breakpoint ($medium) {
+      @include span-columns(12,12);
+  
+  } 
+  }//primary full - for full page accordions
+  
+  
   .secondary {
     @include at-breakpoint($medium) {
      

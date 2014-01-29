@@ -4,25 +4,22 @@
 <meta charset="UTF-8">
 <title>Drupal Development Checklist</title>
 <link rel="stylesheet" href="_/css/styles.css" >
-<link rel="stylesheet" href="css/footable.css" >
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-<script src="js/footable.js" type="text/javascript"></script>
+<link rel="stylesheet" href="_/css/start/jquery-ui-1.10.4.custom.min.css" >
+<script src="_/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="_/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
 
 <meta name ="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale-1.0"> 
 
-<script type="text/javascript">
-	$(function () {
-		$('.footable').footable(
-			
-		breakpoints: {
-        tiny: 100,
-        medium: 555,
-        big: 2048
-    }
-			
-		);
+
+<script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	
 	});
-</script>
+	</script>
+
+
+
 
 </head>
 
@@ -33,7 +30,7 @@
 	<div class="hero">
 		<section class="layout">
 			<div class="branding">
-				<a href="index.html"><img src="images/drupalcheck.svg" alt ="Drupal Development Checklist"></a>
+				<a href="index.html"><img src="images/drupalcheck.svg" alt ="Drupal Development Checklist Logo"></a>
 			</div> <!-- end branding class-->
 		</section><!-- end layout section-->
 	</div>	<!-- end top class-->
@@ -43,7 +40,7 @@
 <div class="navigation">
 		<section class="layout">
 			<ul class="nav">
-				<li><a href="index.html"><i class="icon-apple"></i>&nbsp;Home</a></li>
+				<li><a href="index.html"><i class="icon-apple"></i> &nbsp;Home </a></li>
 				<li><a href="devchecklist.html"><i class="icon-ok-sign"></i>&nbsp;Dev checklist</a></li>
 				<li><a href="designstudio.html"><i class="icon-puzzle-piece"></i>&nbsp;Design Studio</a></li>
 				<li><a href="securitylist.html"><i class="icon-fire"></i>&nbsp;Security list</a></li>
@@ -60,10 +57,171 @@
 
 
 <section class="layout">
-	<div class="primary">
+	<div class="primary-full">
 	
-	<article id="footable"> <h1>Development Checklist</h1>
-		
+	<article id="checklist"> <h1>Development Checklist</h1>
+		<p>&nbsp;</p>
+	
+	<!-- START ACCORDION --->
+	
+		<div id="accordion">
+			<h3>Hosting Environment</h3>
+				<div>
+					<ul>
+					<li>Hardware Specification</li>
+					<li>Hardware Setup</li>
+					<li>Software Installation</li>
+					<li>Drupal Specific Tweaks</li>
+				</ul>
+				</div> <!-- end Hosting Environment -->	
+				
+				<h3>Development Environment</h3>
+				<div><ul>
+					<li>Development Environment</li>
+					<li>Development Process</li>
+					<li>Local Environments</li>
+					<li>Initial Drupal Install</li>
+					<li>Revision Control (GIT)</li>
+					<li>Targeting/Revision Tracking System</li>
+					
+				</ul>
+				</div><!-- end Development Environment -->	
+					
+				<h3>Data Migration</h3>
+				<div><ul>
+					<li>Identify and Analyze</li>
+					<li>Data Scrubbing</li>
+					<li>Design Studio Sessions</li>
+					<li>Data Import/Continuous Migration</li>
+				
+					
+				</ul>
+			</div><!-- end Data Migration -->	
+					
+				<h3>Users, Roles and Permissions</h3>
+				<div><ul>
+					<li>Identify Canonical User Data</li>
+					<li>User Authentication</li>
+					<li>3rd Party Authentication</li>
+					<li>Social Network Identification</li>
+				<li>User Roles and Permissions</li>
+				<li>Section Access Control </li>
+	
+				</ul>
+			</div><!-- end User Roles and Permissions -->	
+					
+					
+				<h3>Navigation</h3>
+				<div><ul>
+					<li>Primary, Secondary and Footer Navigation</li>
+					<li>Breadcrumbs</li>
+					<li>Clean URLs</li>
+					<li>Global Redirects</li>
+					
+				</ul>
+			</div><!-- end Navigations-->	
+						
+			<h3>Site Sections and Features</h3>
+				<div><ul>
+					<li>Homepage</li>
+					<li>Press Room/News</li>
+					<li>Content Type 1</li>
+					<li>List View</li>
+					<li>Block view on Homepage</li>
+					<li>Exportable (variables, permissions etc.)</li>
+					<li>Custom Code 1</li>
+					<li>Module Install/Performance Evaluation Checkpoint</li>
+					<li>Vocabulary/Taxonomy/SEO</li>
+					<li>Context or Panels</li>
+					<li>Feature Dependencies</li>
+					<li>Events & Calendar</li>
+					<li>Newsletters</li>
+					<li>Web Forms</li>
+					<li>Forms</li>
+					<li>Homepage/Page Slider</li>
+					<li>RSS/Syndication</li>
+				
+				</ul>
+			</div><!-- end Site Sections and Features-->	
+			
+			<h3>Site Wide</h3>
+				<div><ul>
+					<li>Block Creation</li>
+					<li>Context</li>
+					<li>Print (print as PDF)</li>
+					<li>Configuration</li>
+					
+				</ul>
+			</div><!-- end Site Wide-->	
+			
+						<h3>Search/SEO</h3>
+				<div><ul>
+					
+					<li>Search Optimization</li>
+					<li>Search Configuration</li>
+					<li>Search Engine Appliance Integration</li>
+						<li>Page Titles</li>
+					<li>Meta-Tags</li>
+					<li>Analytics Integration </li>
+					<li>Vocabularies/Taxonomies</li>
+					
+					
+				</ul>
+			</div><!-- Search/SEO-->	
+						
+				<h3>Editorial Tools</h3>
+				<div><ul>
+					
+					<li>WYSIWYG - CK Editor</li>
+					<li>File Management</li>
+					<li>Editorial Workflow</li>
+					<li>Notifications</li>
+					<li>User Dashboard for Adding Content</li>
+					<li>Scheduled Publishing </li>
+					<li>Content Locking/Provisioning</li>
+				
+				</ul>
+			</div><!-- End Editorial --->	
+						
+				<h3>Rich Media</h3>
+				<div><ul>
+					
+					<li>Photo Galleries</li>
+					<li>Videos</li>
+					<li>3rd Party Integration</li>
+					<li>CDN Setup/Integration</li>
+
+				
+				</ul>
+			</div><!-- Rich Media -->	
+						
+				<h3>Social/Community</h3>
+				<div><ul>
+					
+					<li>Commenting</li>
+					<li>Forums</li>
+					<li>Polls/Quizzes</li>
+					<li>Ratings</li>
+					<li>"Share this"" functionality</li>
+				
+				</ul>
+			</div><!-- end Social/Community --->	
+						
+				<h3>Design/Front End UI</h3>
+				<div><ul>
+					
+					<li>Design Mock ups</li>
+					<li>Design Elements</li>
+					<li>Style Guide</li>
+					<li>Base theme Development</li>
+					<li>Custom WYSIWYG Styles -  (ck Editor)</li>
+					<li>Microsite retheming</li>
+				
+			
+				</ul>
+			</div><!-- end Design/Front End UI --->	
+						
+		</div><!-- end  Accordion -->	
 		
 		
 	</article>
@@ -79,7 +237,7 @@
 -->
 		
 		
-	</aside>
+	
 
 </section>
 

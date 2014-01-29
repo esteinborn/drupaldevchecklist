@@ -52,7 +52,7 @@ $large: 75em;
   
   .secondary {
     @include at-breakpoint($medium) {
-       @include single-transition (all, 1s, ease-out);
+     
       @include span-columns (5 omega, 12);
       
     }

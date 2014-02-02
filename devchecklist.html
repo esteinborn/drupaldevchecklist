@@ -11,13 +11,13 @@
 <meta name ="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale-1.0"> 
 
 
-<script>
-	$(function() {
-		$( "#accordion" ).accordion();
-	
-	});
-	</script>
-
+ <script>
+  $(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
+  </script>
 
 
 
@@ -64,35 +64,64 @@
 	
 	<!-- START ACCORDION --->
 	
+	
+	
 		<div id="accordion">
 			<h3>Hosting Environment</h3>
 				<div>
-					<ul>
-					<li>Hardware Specification</li>
-					<li>Hardware Setup</li>
-					<li>Software Installation</li>
-					<li>Drupal Specific Tweaks</li>
-				</ul>
+					
+	<ul>			
+<li><input type="checkbox"  id="#" tabindex="1">
+  <label for="dc">Hardware Specification </label></li>
+					
+<li><input type="checkbox" id="Hardware Setup"  tabindex="1">
+  <label for="dc"> Hardware Setup</label></li>
+				<li>	<input type="checkbox" id="Software Installation"  tabindex="1">
+  <label for="dc">Software Installation</label></li>
+				<li><input type="checkbox" id="Drupal Specific Tweaks"  tabindex="1">
+  <label for="dc">Drupal Specific Tweaks</label></li>
+  
+				</ul>	
 				</div> <!-- end Hosting Environment -->	
 				
 				<h3>Development Environment</h3>
 				<div><ul>
-					<li>Development Environment</li>
-					<li>Development Process</li>
-					<li>Local Environments</li>
-					<li>Initial Drupal Install</li>
-					<li>Revision Control (GIT)</li>
-					<li>Targeting/Revision Tracking System</li>
+				
+					<li><input type="checkbox"  id="development environment" tabindex="1">
+						<label for="development environment">Development Environment</label></li>
+						
+					<li><input type="checkbox"  id="Development Process" tabindex="1">
+						<label for="development process">Development Process</label></li>
+						
+					<li><input type="checkbox"  id="Local Environments" tabindex="1">
+						<label for="localenvironment">Local Environments</label></li>
+						
+					<li><input type="checkbox"  id="Initial Drupal Install" tabindex="1">
+						<label for="init install">Initial Drupal Install</label></li>
+						
+					<li><input type="checkbox"  id="revision control" tabindex="1">
+						<label for="revision control">Revision Control (GIT)</label></li>
+						
+					<li><input type="checkbox"  id="targeting" tabindex="1">
+						<label for="targeting">Targeting/Revision Tracking System</label></li>
 					
 				</ul>
 				</div><!-- end Development Environment -->	
 					
 				<h3>Data Migration</h3>
 				<div><ul>
-					<li>Identify and Analyze</li>
-					<li>Data Scrubbing</li>
-					<li>Design Studio Sessions</li>
-					<li>Data Import/Continuous Migration</li>
+					
+					<li><input type="checkbox"  id="id" tabindex="1">
+						<label for="id">Identify and Analyze</label></li>
+					
+					<li><input type="checkbox"  id="ds" tabindex="1">
+						<label for="ds">Data Scrubbing</label></li>
+					
+					<li><input type="checkbox"  id="dss" tabindex="1">
+						<label for="dss">Design Studio Sessions</label></li>
+					
+					<li><input type="checkbox"  id="di" tabindex="1">
+						<label for="di">Data Import/Continuous Migration</label></li>
 				
 					
 				</ul>
@@ -100,12 +129,23 @@
 					
 				<h3>Users, Roles and Permissions</h3>
 				<div><ul>
-					<li>Identify Canonical User Data</li>
-					<li>User Authentication</li>
-					<li>3rd Party Authentication</li>
-					<li>Social Network Identification</li>
-				<li>User Roles and Permissions</li>
-				<li>Section Access Control </li>
+					<li><input type="checkbox"  id="canonical" tabindex="1">
+						<label for="canonical">Identify Canonical User Data</label></li>
+						
+					<li><input type="checkbox"  id="userid" tabindex="1">
+						<label for="userid">User Authentication</label></li>
+						
+					<li><input type="checkbox"  id="3p" tabindex="1">
+						<label for="3p">3rd Party Authentication</label></li>
+						
+					<li><input type="checkbox"  id="social" tabindex="1">
+						<label for="social">Social Network Identification</label></li>
+						
+				<li><input type="checkbox"  id="roles" tabindex="1">
+					<label for="roles">User Roles and Permissions</label></li>
+					
+				<li><input type="checkbox"  id="section" tabindex="1">
+					<label for="section">Section Access Control</label> </li>
 	
 				</ul>
 			</div><!-- end User Roles and Permissions -->	
@@ -113,43 +153,92 @@
 					
 				<h3>Navigation</h3>
 				<div><ul>
-					<li>Primary, Secondary and Footer Navigation</li>
-					<li>Breadcrumbs</li>
-					<li>Clean URLs</li>
-					<li>Global Redirects</li>
+					<li><input type="checkbox"  id="nav" tabindex="1">
+						<label for="nav">Primary, Secondary and Footer Navigation</label></li>
+						
+					<li><input type="checkbox"  id="bread" tabindex="1">
+						<label for="bread">Breadcrumbs</label></li>
+						
+					<li><input type="checkbox"  id="cleanurls" tabindex="1">
+						<label for="cleanurls">Clean URLs</label></li>
+						
+					<li><input type="checkbox"  id="globalredirects" tabindex="1">
+						<label for="globalredirects">Global Redirects</label></li>
 					
 				</ul>
 			</div><!-- end Navigations-->	
 						
 			<h3>Site Sections and Features</h3>
 				<div><ul>
-					<li>Homepage</li>
-					<li>Press Room/News</li>
-					<li>Content Type 1</li>
-					<li>List View</li>
-					<li>Block view on Homepage</li>
-					<li>Exportable (variables, permissions etc.)</li>
-					<li>Custom Code 1</li>
-					<li>Module Install/Performance Evaluation Checkpoint</li>
-					<li>Vocabulary/Taxonomy/SEO</li>
-					<li>Context or Panels</li>
-					<li>Feature Dependencies</li>
-					<li>Events & Calendar</li>
-					<li>Newsletters</li>
-					<li>Web Forms</li>
-					<li>Forms</li>
-					<li>Homepage/Page Slider</li>
-					<li>RSS/Syndication</li>
+					<li><input type="checkbox"  id="homepage" tabindex="1">
+						<label for="homepage">Homepage</label></li>
+						
+					<li><input type="checkbox"  id="pressroom" tabindex="1">
+						<label for="pressroom">Press Room/News</label></li>
+						
+					<li><input type="checkbox"  id="contenttypes" tabindex="1">
+						<label for="contenttypes">Content Type 1</label></li>
+						
+					<li><input type="checkbox"  id="listview" tabindex="1">
+						<label for="listview">List View</label></li>
+						
+					<li><input type="checkbox"  id="blockviewhome" tabindex="1">
+						<label for="blockviewhome">Block view on Homepage</label></li>
+						
+					<li><input type="checkbox"  id="exportable" tabindex="1">
+						<label for="exportable">Exportable (variables, permissions etc.)</label></li>
+						
+					<li><input type="checkbox"  id="customcode" tabindex="1">
+						<label for="customcode">Custom Code 1</label></li>
+						
+					<li><input type="checkbox"  id="module" tabindex="1">
+						<label for="module">Module Install/Performance Evaluation Checkpoint</label></li>
+						
+					<li><input type="checkbox"  id="vocab" tabindex="1">
+						<label for="vocab">Vocabulary/Taxonomy/SEO</label></li>
+						
+					<li><input type="checkbox"  id="context" tabindex="1">
+						<label for="context">Context or Panels</label></li>
+						
+					<li><input type="checkbox"  id="featuredepend" tabindex="1">
+						<label for="featuredepend">Feature Dependencies</label></li>
+						
+					<li><input type="checkbox"  id="eventcal" tabindex="1">
+						<label for="eventcal">Events & Calendar</label></li>
+						
+					<li><input type="checkbox"  id="newsletters" tabindex="1">
+						<label for="newsletters">Newsletters</label></li>
+						
+					<li><input type="checkbox"  id="webforms" tabindex="1">
+						<label for="webforms">Web Forms</label></li>
+						
+					<li><input type="checkbox"  id="forms" tabindex="1">
+						<label for="forms">Forms</label></li>
+						
+					<li><input type="checkbox"  id="pageslide" tabindex="1">
+						<label for="pageslide">Homepage/Page Slider</label></li>
+						
+					<li><input type="checkbox"  id="rss" tabindex="1">
+						<label for="rss">RSS/Syndication</label></li>
+						
 				
 				</ul>
 			</div><!-- end Site Sections and Features-->	
 			
 			<h3>Site Wide</h3>
 				<div><ul>
-					<li>Block Creation</li>
-					<li>Context</li>
-					<li>Print (print as PDF)</li>
-					<li>Configuration</li>
+					<li><input type="checkbox"  id="blockcreation" tabindex="1">
+						<label for="blockcreation">Block Creation</label></li>
+						
+					<li><input type="checkbox"  id="contexts" tabindex="1">
+						<label for="contexts">Context</label></li>
+						
+					<li><input type="checkbox"  id="printpdf" tabindex="1">
+						<label for="printpdf">Print (print as PDF)</label></li>
+						
+					<li><input type="checkbox"  id="config" tabindex="1">
+						<label for="config">Configuration</label></li>
+						
 					
 				</ul>
 			</div><!-- end Site Wide-->	
@@ -157,13 +246,26 @@
 						<h3>Search/SEO</h3>
 				<div><ul>
 					
-					<li>Search Optimization</li>
-					<li>Search Configuration</li>
-					<li>Search Engine Appliance Integration</li>
-						<li>Page Titles</li>
-					<li>Meta-Tags</li>
-					<li>Analytics Integration </li>
-					<li>Vocabularies/Taxonomies</li>
+					<li><input type="checkbox"  id="searchopt" tabindex="1">
+						<label for="searchopt">Search Optimization</label></li>
+					
+					<li><input type="checkbox"  id="searchconfig" tabindex="1">
+						<label for="searchconfig">Search Configuration</label></li>
+					
+					<li><input type="checkbox"  id="seappi" tabindex="1">
+						<label for="seappi">Search Engine Appliance Integration</label></li>
+					
+					<li><input type="checkbox"  id="pagetitles" tabindex="1">
+							<label for="pagetitles">Page Titles</label></li>
+					
+					<li><input type="checkbox"  id="metatags" tabindex="1">
+						<label for="metatags">Meta-Tags</label></li>
+					
+					<li><input type="checkbox"  id="analytics" tabindex="1">
+						<label for="analytics">Analytics Integration </label></li>
+						
+					<li><input type="checkbox"  id="vocabtax" tabindex="1">
+						<label for="vocabtax">Vocabularies/Taxonomies</label></li>
 					
 					
 				</ul>
@@ -172,13 +274,26 @@
 				<h3>Editorial Tools</h3>
 				<div><ul>
 					
-					<li>WYSIWYG - CK Editor</li>
-					<li>File Management</li>
-					<li>Editorial Workflow</li>
-					<li>Notifications</li>
-					<li>User Dashboard for Adding Content</li>
-					<li>Scheduled Publishing </li>
-					<li>Content Locking/Provisioning</li>
+					<li><input type="checkbox"  id="ckedit" tabindex="1">
+						<label for="ckedit">WYSIWYG - CK Editor</label></li>
+					
+					<li><input type="checkbox"  id="fileman" tabindex="1">
+						<label for="fileman">File Management</label></li>
+					
+					<li><input type="checkbox"  id="editorial" tabindex="1">
+						<label for="editorial">Editorial Workflow</label></li>
+					
+					<li><input type="checkbox"  id="notif" tabindex="1">
+						<label for="notif">Notifications</label></li>
+					
+					<li><input type="checkbox"  id="dashboard" tabindex="1">
+						<label for="dashboard">User Dashboard for Adding Content</label></li>
+					
+					<li><input type="checkbox"  id="schedpub" tabindex="1">
+						<label for="schedpub">Scheduled Publishing </label></li>
+					
+					<li><input type="checkbox"  id="locking" tabindex="1">
+						<label for="locking">Content Locking/Provisioning</label></li>
 				
 				</ul>
 			</div><!-- End Editorial --->	
@@ -186,10 +301,17 @@
 				<h3>Rich Media</h3>
 				<div><ul>
 					
-					<li>Photo Galleries</li>
-					<li>Videos</li>
-					<li>3rd Party Integration</li>
-					<li>CDN Setup/Integration</li>
+					<li><input type="checkbox"  id="pg" tabindex="1">
+						<label for="pg">Photo Galleries</label></li>
+					
+					<li><input type="checkbox"  id="videos" tabindex="1">
+						<label for="videos">Videos</label></li>
+					
+					<li><input type="checkbox"  id="3rd" tabindex="1">
+						<label for="3rd">3rd Party Integration</label></li>
+					
+					<li><input type="checkbox"  id="cdn" tabindex="1">
+						<label for="cdn">CDN Setup/Integration</label></li>
 
 				
 				</ul>
@@ -198,11 +320,20 @@
 				<h3>Social/Community</h3>
 				<div><ul>
 					
-					<li>Commenting</li>
-					<li>Forums</li>
-					<li>Polls/Quizzes</li>
-					<li>Ratings</li>
-					<li>"Share this"" functionality</li>
+					<li><input type="checkbox"  id="commenting" tabindex="1">
+						<label for="commenting">Commenting</label></li>
+					
+					<li><input type="checkbox"  id="forums" tabindex="1">
+						<label for="forums">Forums</label></li>
+					
+					<li><input type="checkbox"  id="polls" tabindex="1">
+						<label for="polls">Polls/Quizzes</label></li>
+					
+					<li><input type="checkbox"  id="ratings" tabindex="1">
+						<label for="ratings">Ratings</label></li>
+					
+					<li><input type="checkbox"  id="share" tabindex="1">
+						<label for="share">"Share this"" functionality</label></li>
 				
 				</ul>
 			</div><!-- end Social/Community --->	
@@ -210,12 +341,23 @@
 				<h3>Design/Front End UI</h3>
 				<div><ul>
 					
-					<li>Design Mock ups</li>
-					<li>Design Elements</li>
-					<li>Style Guide</li>
-					<li>Base theme Development</li>
-					<li>Custom WYSIWYG Styles -  (ck Editor)</li>
-					<li>Microsite retheming</li>
+					<li><input type="checkbox"  id="mockup" tabindex="1">
+						<label for="mockup">Design Mock ups</label></li>
+					
+					<li><input type="checkbox"  id="elements" tabindex="1">
+						<label for="elements">Design Elements</label></li>
+					
+					<li><input type="checkbox"  id="guide" tabindex="1">
+						<label for="guide">Style Guide</label></li>
+					
+					<li><input type="checkbox"  id="basetheme" tabindex="1">
+						<label for="basetheme">Base theme Development</label></li>
+					
+					<li><input type="checkbox"  id="customck" tabindex="1">
+						<label for="customck">Custom WYSIWYG Styles -  (ck Editor)</label></li>
+					
+					<li><input type="checkbox"  id="microsite" tabindex="1">
+						<label for="microsite">Microsite retheming</label></li>
 				
 			
 				</ul>

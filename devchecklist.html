@@ -19,6 +19,28 @@
   });
   </script>
 
+<script>
+$(document).ready(function() {
+		$('.parent').click(function() {
+			$('.details').toggleClass('visible');
+		});
+	});
+</script>
+
+
+
+<style>
+	#details ul.sub-nav {
+    display: none;
+}
+
+#details ul.visible {
+    display: block;
+}
+	
+	
+</style>
+
 
 
 </head>
@@ -70,9 +92,16 @@
 			<h3>Hosting Environment</h3>
 				<div>
 					
-	<ul>			
-<li><input type="checkbox"  id="#" tabindex="1">
-  <label for="dc">Hardware Specification </label></li>
+	<ul id="details">			
+<li class="parent"><input type="checkbox"  id="#" tabindex="1">
+  <label for="dc">Hardware Specification - details </label>
+  <ul class="details">
+  	<li>Selection and advisement of Hardware</li>
+  	
+  </ul>
+  
+  
+  </li>
 					
 <li><input type="checkbox" id="Hardware Setup"  tabindex="1">
   <label for="dc"> Hardware Setup</label></li>
@@ -204,7 +233,7 @@
 						<label for="featuredepend">Feature Dependencies</label></li>
 						
 					<li><input type="checkbox"  id="eventcal" tabindex="1">
-						<label for="eventcal">Events & Calendar</label></li>
+						<label for="eventcal">Events and Calendar</label></li>
 						
 					<li><input type="checkbox"  id="newsletters" tabindex="1">
 						<label for="newsletters">Newsletters</label></li>

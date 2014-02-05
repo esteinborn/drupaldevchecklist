@@ -22,24 +22,13 @@
 <script>
 $(document).ready(function() {
 		$('.parent').click(function() {
-			$('.details').toggleClass('visible');
+			$('.sub-nav').toggleClass('visible');
 		});
 	});
+
 </script>
 
 
-
-<style>
-	#details ul.sub-nav {
-    display: none;
-}
-
-#details ul.visible {
-    display: block;
-}
-	
-	
-</style>
 
 
 
@@ -65,7 +54,7 @@ $(document).ready(function() {
 				<li><a href="index.html"><i class="icon-apple"></i> &nbsp;Home </a></li>
 				<li><a href="devchecklist.html"><i class="icon-ok-sign"></i>&nbsp;Dev checklist</a></li>
 				<li><a href="designstudio.html"><i class="icon-puzzle-piece"></i>&nbsp;Design Studio</a></li>
-				<li><a href="securitylist.html"><i class="icon-fire"></i>&nbsp;Security list</a></li>
+				<!-- <li><a href="securitylist.html"><i class="icon-fire"></i>&nbsp;Security list</a></li> -->
 					<li><a href="performancelist.html"><i class="icon-dashboard"></i>&nbsp;Performance List</a></li>
 				<li><a href="#"><i class="icon-flag-checkered"></i>&nbsp;Launch List </a></li>
 			</ul> <!-- end nav ul -->
@@ -90,49 +79,55 @@ $(document).ready(function() {
 	
 		<div id="accordion">
 			<h3>Hosting Environment</h3>
-				<div>
+<div>
+	
 					
-	<ul id="details">			
-<li class="parent"><input type="checkbox"  id="#" tabindex="1">
-  <label for="dc">Hardware Specification - details </label>
-  <ul class="details">
-  	<li>Selection and advisement of Hardware</li>
+	<li ><input type="checkbox"  id="Hardware Specification" tabindex="1">
+  	<strong>Hardware Specification :</strong> <em>Selection and advisement of Hardware</em></li>
+
+<li>
+	
+<input type="checkbox" id="Hardware Setup"  tabindex="1">
+  Hardware Setup : <em>Bring hardware online, create the LAN, hosting, physical security.</em>
+  	</li>
   	
-  </ul>
+   
+   
+   
+<li>	<input type="checkbox" id="Software Installation"  tabindex="1">
+  <label for="si">Software Installation : WAMP, LAMP, APC, Cacti, Memcached, Varnish, SOLR </label></li>
   
   
-  </li>
-					
-<li><input type="checkbox" id="Hardware Setup"  tabindex="1">
-  <label for="dc"> Hardware Setup</label></li>
-				<li>	<input type="checkbox" id="Software Installation"  tabindex="1">
-  <label for="dc">Software Installation</label></li>
+  
 				<li><input type="checkbox" id="Drupal Specific Tweaks"  tabindex="1">
-  <label for="dc">Drupal Specific Tweaks</label></li>
+  <label for="dst">Drupal Specific Tweaks : 
+  	Make the system work with Drupal’s preferences: syslog monitoring, load balancing scripts, Drupal mount points, tweaking all conf files for the stack. Testing. Ongoing Task.
+  </label></li>
   
-				</ul>	
-				</div> <!-- end Hosting Environment -->	
+			
+</div>
+ <!-- end Hosting Environment -->	
 				
 				<h3>Development Environment</h3>
 				<div><ul>
 				
 					<li><input type="checkbox"  id="development environment" tabindex="1">
-						<label for="development environment">Development Environment</label></li>
+						<label for="development environment">Development Environment : Set up and configure development environments: sync scripts, Drush, additional LAMP tweaks for development environment.  Set up staging site.</label></li>
 						
 					<li><input type="checkbox"  id="Development Process" tabindex="1">
-						<label for="development process">Development Process</label></li>
+						<label for="development process">Development Process : Document workflow of code and data synchronization, local environments, and deployment.</label></li>
 						
 					<li><input type="checkbox"  id="Local Environments" tabindex="1">
-						<label for="localenvironment">Local Environments</label></li>
+						<label for="localenvironment">Local Environments : Set up local development environments.  </label></li>
 						
 					<li><input type="checkbox"  id="Initial Drupal Install" tabindex="1">
-						<label for="init install">Initial Drupal Install</label></li>
+						<label for="init install">Initial Drupal Install :  Install and configure (initial Drupal install profile or make file)</label></li>
 						
 					<li><input type="checkbox"  id="revision control" tabindex="1">
-						<label for="revision control">Revision Control (GIT)</label></li>
+						<label for="revision control">Revision Control (GIT) : establish repository and perform initial checkout.</label></li>
 						
 					<li><input type="checkbox"  id="targeting" tabindex="1">
-						<label for="targeting">Targeting/Revision Tracking System</label></li>
+						<label for="targeting">Targeting/Revision Tracking System : The PM will create the first run of tickets, setting milestones, notifications, adding hours estimates for each ticket, and setting roles and permissions.</label></li>
 					
 				</ul>
 				</div><!-- end Development Environment -->	
@@ -141,16 +136,15 @@ $(document).ready(function() {
 				<div><ul>
 					
 					<li><input type="checkbox"  id="id" tabindex="1">
-						<label for="id">Identify and Analyze</label></li>
+						<label for="id">Identify and Analyze : Identify and analyze the sources of data.</label></li>
 					
 					<li><input type="checkbox"  id="ds" tabindex="1">
-						<label for="ds">Data Scrubbing</label></li>
+						<label for="ds">Data Scrubbing :  Extract data into a format that will be easier to consume in Drupal.  (Sync scripts may be required)</label></li>
 					
-					<li><input type="checkbox"  id="dss" tabindex="1">
-						<label for="dss">Design Studio Sessions</label></li>
+					
 					
 					<li><input type="checkbox"  id="di" tabindex="1">
-						<label for="di">Data Import/Continuous Migration</label></li>
+						<label for="di">Data Import/Continuous Migration : Create a process to pull new/changed data from the source into Drupal.</label></li>
 				
 					
 				</ul>
@@ -159,22 +153,22 @@ $(document).ready(function() {
 				<h3>Users, Roles and Permissions</h3>
 				<div><ul>
 					<li><input type="checkbox"  id="canonical" tabindex="1">
-						<label for="canonical">Identify Canonical User Data</label></li>
+						<label for="canonical">Identify Canonical User Data : Identify the source of user data - Drupal or external service.</label></li>
 						
 					<li><input type="checkbox"  id="userid" tabindex="1">
-						<label for="userid">User Authentication</label></li>
+						<label for="userid">User Authentication : Authenticate with external services and apps.  Single Sign On (SSO) authentication.</label></li>
 						
 					<li><input type="checkbox"  id="3p" tabindex="1">
-						<label for="3p">3rd Party Authentication</label></li>
+						<label for="3p">3rd Party Authentication : Authentication with 3rd party services.  (if outside external source needs to authenticate via Drupal)</label></li>
 						
 					<li><input type="checkbox"  id="social" tabindex="1">
-						<label for="social">Social Network Identification</label></li>
+						<label for="social">Social Network Identification :  Allow users to authenticate from Facebook and other Social apps.</label></li>
 						
 				<li><input type="checkbox"  id="roles" tabindex="1">
-					<label for="roles">User Roles and Permissions</label></li>
+					<label for="roles">User Roles and Permissions : Role creation and permission settings.  (could include syncing with remote data sources like LDAP)</label></li>
 					
 				<li><input type="checkbox"  id="section" tabindex="1">
-					<label for="section">Section Access Control</label> </li>
+					<label for="section">Section Access Control : Utilize context/spaces or taxonomy access control to set user access on site sections.</label> </li>
 	
 				</ul>
 			</div><!-- end User Roles and Permissions -->	
@@ -183,16 +177,16 @@ $(document).ready(function() {
 				<h3>Navigation</h3>
 				<div><ul>
 					<li><input type="checkbox"  id="nav" tabindex="1">
-						<label for="nav">Primary, Secondary and Footer Navigation</label></li>
+						<label for="nav">Primary, Secondary and Footer Navigation : Building and organizing the top, secondary, and footer navigation. (consider dummy page creation)</label></li>
 						
 					<li><input type="checkbox"  id="bread" tabindex="1">
-						<label for="bread">Breadcrumbs</label></li>
+						<label for="bread">Breadcrumbs : Breadcrumbs will be built to reflect the hierarchy structure reflected in the menus.</label></li>
 						
 					<li><input type="checkbox"  id="cleanurls" tabindex="1">
-						<label for="cleanurls">Clean URLs</label></li>
+						<label for="cleanurls">Clean URLs : Set rules for pathauto integration</label></li>
 						
 					<li><input type="checkbox"  id="globalredirects" tabindex="1">
-						<label for="globalredirects">Global Redirects</label></li>
+						<label for="globalredirects">Global Redirects : Set redirects for handling existing URLs.	</label></li>
 					
 				</ul>
 			</div><!-- end Navigations-->	
@@ -257,16 +251,16 @@ $(document).ready(function() {
 			<h3>Site Wide</h3>
 				<div><ul>
 					<li><input type="checkbox"  id="blockcreation" tabindex="1">
-						<label for="blockcreation">Block Creation</label></li>
+						<label for="blockcreation">Block Creation : Create all sitewide blocks.</label></li>
 						
 					<li><input type="checkbox"  id="contexts" tabindex="1">
-						<label for="contexts">Context</label></li>
+						<label for="contexts">Context : Context based on URL path, section, or content type.</label></li>
 						
 					<li><input type="checkbox"  id="printpdf" tabindex="1">
-						<label for="printpdf">Print (print as PDF)</label></li>
+						<label for="printpdf">Print (print as PDF) : (Possibly: Print as PDF)</label></li>
 						
 					<li><input type="checkbox"  id="config" tabindex="1">
-						<label for="config">Configuration</label></li>
+						<label for="config">Configuration : Site information, permissions, variables, set front page, files directory, global imagecache settings (any additional items on administration page)</label></li>
 						
 					
 				</ul>
@@ -276,25 +270,25 @@ $(document).ready(function() {
 				<div><ul>
 					
 					<li><input type="checkbox"  id="searchopt" tabindex="1">
-						<label for="searchopt">Search Optimization</label></li>
+						<label for="searchopt">Search Optimization : Exclude or weight content types, etc. Consider faceted search, PDF search</label></li>
 					
 					<li><input type="checkbox"  id="searchconfig" tabindex="1">
-						<label for="searchconfig">Search Configuration</label></li>
+						<label for="searchconfig">Search Configuration : Integration with Drupal </label></li>
 					
 					<li><input type="checkbox"  id="seappi" tabindex="1">
-						<label for="seappi">Search Engine Appliance Integration</label></li>
+						<label for="seappi">Search Engine Appliance Integration : If Search Engine Appliance is used, configure for integration with Drupal. Decide on search engine, document integration points and configuration needs.</label></li>
 					
 					<li><input type="checkbox"  id="pagetitles" tabindex="1">
-							<label for="pagetitles">Page Titles</label></li>
+							<label for="pagetitles">Page Titles : (Possibly: set patterns for titles, set automatic page titles)</label></li>
 					
 					<li><input type="checkbox"  id="metatags" tabindex="1">
-						<label for="metatags">Meta-Tags</label></li>
+						<label for="metatags">Meta-Tags : Nodewords</label></li>
 					
 					<li><input type="checkbox"  id="analytics" tabindex="1">
-						<label for="analytics">Analytics Integration </label></li>
+						<label for="analytics">Analytics Integration : Integration into the client’s existing analytics system.</label></li>
 						
 					<li><input type="checkbox"  id="vocabtax" tabindex="1">
-						<label for="vocabtax">Vocabularies/Taxonomies</label></li>
+						<label for="vocabtax">Vocabularies/Taxonomies : Set initial values for Vocabularies, flesh out before launch.</label></li>
 					
 					
 				</ul>
@@ -304,25 +298,25 @@ $(document).ready(function() {
 				<div><ul>
 					
 					<li><input type="checkbox"  id="ckedit" tabindex="1">
-						<label for="ckedit">WYSIWYG - CK Editor</label></li>
+						<label for="ckedit">WYSIWYG - CK Editor : Implement WYSIWYG tool for editing content.  Set “excludes” for fields in which the editor should not be used.</label></li>
 					
 					<li><input type="checkbox"  id="fileman" tabindex="1">
-						<label for="fileman">File Management</label></li>
+						<label for="fileman">File Management : Implement method of browsing/uploading/inserting files into the WYSIWYG editor. </label></li>
 					
 					<li><input type="checkbox"  id="editorial" tabindex="1">
-						<label for="editorial">Editorial Workflow</label></li>
+						<label for="editorial">Editorial Workflow :  Set up a fully functional editorial workflow.</label></li>
 					
 					<li><input type="checkbox"  id="notif" tabindex="1">
-						<label for="notif">Notifications</label></li>
+						<label for="notif">Notifications :  Email or site notifications</label></li>
 					
 					<li><input type="checkbox"  id="dashboard" tabindex="1">
-						<label for="dashboard">User Dashboard for Adding Content</label></li>
+						<label for="dashboard">User Dashboard for Adding Content : (Possibly Workbench, Panels, Views Bulk Operations screens)</label></li>
 					
 					<li><input type="checkbox"  id="schedpub" tabindex="1">
-						<label for="schedpub">Scheduled Publishing </label></li>
+						<label for="schedpub">Scheduled Publishing :  Set up Scheduler module to handle future publishing. </label></li>
 					
 					<li><input type="checkbox"  id="locking" tabindex="1">
-						<label for="locking">Content Locking/Provisioning</label></li>
+						<label for="locking">Content Locking/Provisioning : Content locking, Revisioning</label></li>
 				
 				</ul>
 			</div><!-- End Editorial --->	
@@ -331,16 +325,16 @@ $(document).ready(function() {
 				<div><ul>
 					
 					<li><input type="checkbox"  id="pg" tabindex="1">
-						<label for="pg">Photo Galleries</label></li>
+						<label for="pg">Photo Galleries :  Configuration for Photos and associated Galleries.</label></li>
 					
 					<li><input type="checkbox"  id="videos" tabindex="1">
-						<label for="videos">Videos</label></li>
+						<label for="videos">Videos : Configure embedded media field on content types in which videos can be inserted.</label></li>
 					
 					<li><input type="checkbox"  id="3rd" tabindex="1">
-						<label for="3rd">3rd Party Integration</label></li>
+						<label for="3rd">3rd Party Integration :  (Any NYS third-party tool we need to configure, setup, etc.., custom VMS)</label></li>
 					
 					<li><input type="checkbox"  id="cdn" tabindex="1">
-						<label for="cdn">CDN Setup/Integration</label></li>
+						<label for="cdn">CDN Setup/Integration : Establishing a CDN and making necessary tweaks in Drupal for integration.</label></li>
 
 				
 				</ul>
@@ -350,19 +344,30 @@ $(document).ready(function() {
 				<div><ul>
 					
 					<li><input type="checkbox"  id="commenting" tabindex="1">
-						<label for="commenting">Commenting</label></li>
+						<label for="commenting">Commenting :  Configure user commenting settings on necessary content types.</label></li>
 					
 					<li><input type="checkbox"  id="forums" tabindex="1">
-						<label for="forums">Forums</label></li>
+						<label for="forums">Forums :  Install and configure Drupal forums. Create discussion topics and assign moderators.</label></li>
 					
 					<li><input type="checkbox"  id="polls" tabindex="1">
-						<label for="polls">Polls/Quizzes</label></li>
+						<label for="polls">Polls/Quizzes :  (Custom or default Drupal modules)</label></li>
 					
 					<li><input type="checkbox"  id="ratings" tabindex="1">
-						<label for="ratings">Ratings</label></li>
+						<label for="ratings">Ratings :  Enable and configure ratings on the appropriate content types.</label></li>
 					
 					<li><input type="checkbox"  id="share" tabindex="1">
-						<label for="share">"Share this"" functionality</label></li>
+						<label for="share">"Share this"  functionality :  Install and configure a module which allows “Share this” functionality.</label></li>
+						
+							<li><input type="checkbox"  id="twitterfeed" tabindex="1">
+						<label for="twitterfeed">Twitter Feed : Implement Live/Dynamic Twitter Feed</label></li>
+						
+							<li><input type="checkbox"  id="flags" tabindex="1">
+						<label for="flags">Flag : (Possibly: Report abuse, Like, bookmarks, "bin")</label></li>
+						
+				<li><input type="checkbox"  id="emailfriend" tabindex="1">
+						<label for="emailfriend">Email to Friend: Install and configure “email to friend” functionality on appropriate content types.</label></li>
+						
+				
 				
 				</ul>
 			</div><!-- end Social/Community --->	
@@ -370,23 +375,27 @@ $(document).ready(function() {
 				<h3>Design/Front End UI</h3>
 				<div><ul>
 					
+					
+					<li><input type="checkbox"  id="dss" tabindex="1">
+						<label for="dss">Design Studio Sessions : Develop personas, involve shareholders, wireframe multiple layouts, determine most effective design for project.</label></li>
+					
 					<li><input type="checkbox"  id="mockup" tabindex="1">
-						<label for="mockup">Design Mock ups</label></li>
+						<label for="mockup">Design Mock ups : Determine # of PSDs required in the Design Deck to touch all key pages, as well as to provide general branding direction and styles for forms, lists, etc. </label></li>
 					
 					<li><input type="checkbox"  id="elements" tabindex="1">
-						<label for="elements">Design Elements</label></li>
+						<label for="elements">Design Elements :  Icons, ads, photo treatments, logo work, etc.</label></li>
 					
 					<li><input type="checkbox"  id="guide" tabindex="1">
-						<label for="guide">Style Guide</label></li>
+						<label for="guide">Style Guide : A one-page style guide will be created to identify the various header styles, link styles, bullets, etc.  This will be utilized in theming and when creating custom WYSIWYG styles.</label></li>
 					
 					<li><input type="checkbox"  id="basetheme" tabindex="1">
-						<label for="basetheme">Base theme Development</label></li>
+						<label for="basetheme">Base theme Development :  The design template will be integrated into Drupal using Drupal theming best practices. This is the global base theme before the Features build-out begins. In addition, you should budget for browser-specific theme tests at the end of the project.</label></li>
 					
 					<li><input type="checkbox"  id="customck" tabindex="1">
-						<label for="customck">Custom WYSIWYG Styles -  (ck Editor)</label></li>
+						<label for="customck">Custom WYSIWYG Styles -  (ck Editor) : Styles will be created for the WYSIWYG so that a user can select the text formatting option in a drop-down list.  These styles will be based on the style guide.</label></li>
 					
 					<li><input type="checkbox"  id="microsite" tabindex="1">
-						<label for="microsite">Microsite retheming</label></li>
+						<label for="microsite">Microsite retheming :  Often clients have 3rd party sites such as a Wordpress blog or add-ons like Shopify or Tender App, that need to be re-themed to match the new designs.</label></li>
 				
 			
 				</ul>

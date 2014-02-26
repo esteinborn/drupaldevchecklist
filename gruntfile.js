@@ -1,18 +1,17 @@
-module.exports = function (grunt) {
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-		grunt.loadNpmTasks('grunt-contrib-compass');
+/* global module:false */
+module.exports = function(grunt) {
 
+  // Project configuration
 	grunt.initConfig({
-		
+    pkg: grunt.file.readJSON('package.json'),		
 		uglify:  {
 			my_target: {
 				files: {
-					'_/js/script.js' : ['_/components/js/*.js']
+					'assets/js/script.js' : ['assets/components/js/*.js']
 				}//files
 			}// my target
-		}, //uglify
-		
+		},//uglify
+
 		compass: {
 			dev: {
 				options: {
@@ -21,17 +20,16 @@ module.exports = function (grunt) {
 				}//options
 			}//dev
 		},//compass
-		
 				
 		watch: {
 			options: { livereload: true },
 			scripts: {
-				files: ['_/components/js/*.js' ],
-			    tasks: ['uglify']
+				files: ['assets/components/js/*.js' ],
+          tasks: ['uglify']
 			}, //scripts
 			
 			sass: {
-				files: ['_/components/sass/*.scss'],
+				files: ['assets/components/sass/*.scss'],
 				tasks: ['compass:dev']
 			}, //sass
 			
@@ -40,10 +38,12 @@ module.exports = function (grunt) {
 			}
 			
 		}//watch
-		
-		
-	})//init config
 
-grunt.registerTask('default', 'watch');
+	}); //init config
 
-} //exports
+// Load all Grunt plugins from the package.json file
+require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
+grunt.registerTask('default', [ 'uglify', 'compass', 'watch']);
+
+}; //exports

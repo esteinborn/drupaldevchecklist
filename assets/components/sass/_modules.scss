@@ -1,0 +1,37 @@
+//  FooTables Styles ------------------------------------------------
+
+// end FooTable Styles ---------------
+
+//homepage image -------------------
+
+img {
+  @include border-radius(50%);
+  width: 120px;
+  float: left;
+  margin: {
+    right: 10px;
+    bottom: 10px;
+  }//margin
+  
+}//img
+
+
+//social media icons ------------------
+
+.socialmediaicons {
+  .title {
+    float: left;
+  }
+  ul {
+    float: left;
+    li {
+      display: inline-block;
+      margin-left: 5px;
+      img {
+        width:30px;
+        @include border-radius(50%);
+      } //img
+    }//li
+  }//ul
+  
+}//socialmediaicons

@@ -3,18 +3,20 @@
 "version" : "0.0.1",
 "description" : "A checklist of drupal development steps for project websites.",
 "keywords" : "Drupal, development, checklist, link resource ",
-"url" : "https://github.com/tomatkins/drupaldevchecklist",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tomatkins/drupaldevchecklist.git"
+  },
 "author" : "Tom Atkins",
 "email" : "drupaldevchecklist@gmail.com",
 "license" : "AFL-3.0",
-"dependencies" : {
-	"grunt" : "~0.4.1",
-	"grunt-contrib-watch" : "~0.5.1",
-	"grunt-contrib-compass" : "~0.5.0",
-	"grunt-contrib-uglify" : "~0.2.2",
-	"matchdep" : "~0.1.2"
-
-	} 
+"devDependencies" : {
+  "grunt" : "~0.4.1",
+  "grunt-contrib-watch" : "~0.5.1",
+  "grunt-contrib-compass" : "~0.5.0",
+  "grunt-contrib-uglify" : "~0.2.2",
+  "matchdep" : "~0.1.2"
+} 
 
 
 }

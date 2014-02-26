@@ -3,29 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Drupal Development Checklist</title>
-<link rel="stylesheet" href="_/css/styles.css" >
-<link rel="stylesheet" href="_/css/solar2/jquery-ui-1.10.4.custom.min.css" >
-<script src="_/js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="_/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-
-<meta name ="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale-1.0"> 
-
-
- <script>
-  $(function() {
-    $( "#accordion" ).accordion({
-      heightStyle: "content"
-    });
-  });
-  </script>
-
-
-
-
+<link rel="stylesheet" href="assets/css/solar2/jquery-ui-1.10.4.custom.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<meta name ="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
 </head>
-
 <body>
-
 <header>
 
 	<div class="hero">
@@ -63,14 +45,14 @@
 	<article id="checklist"> <h1>Development Checklist</h1>
 			<p><em>Based on Content generously donated by Chris Catalina</em></p>
 	
-	<!-- START ACCORDION --->
+	<!-- START ACCORDION -->
 	
 	
 	
 		<div id="accordion">
 			<h3>Hosting Environment</h3>
 <div>
-	
+	<ul>
 					
 	<li ><input type="checkbox"  id="Hardware Specification" tabindex="1">
   	<strong>Hardware Specification :</strong> <em>Selection and advisement of Hardware</em></li>
@@ -90,7 +72,7 @@
   <label for="dst">Drupal Specific Tweaks : 
   	Make the system work with Drupal’s preferences: syslog monitoring, load balancing scripts, Drupal mount points, tweaking all conf files for the stack. Testing. Ongoing Task.
   </label></li>
-  
+  </ul>
 			
 </div>
  <!-- end Hosting Environment -->	
@@ -306,7 +288,7 @@
 						<label for="locking">Content Locking/Provisioning : Content locking, Revisioning</label></li>
 				
 				</ul>
-			</div><!-- End Editorial --->	
+			</div><!-- End Editorial -->	
 						
 				<h3>Rich Media</h3>
 				<div><ul>
@@ -357,7 +339,7 @@
 				
 				
 				</ul>
-			</div><!-- end Social/Community --->	
+			</div><!-- end Social/Community -->	
 						
 				<h3>Design/Front End UI</h3>
 				<div><ul>
@@ -386,7 +368,7 @@
 				
 			
 				</ul>
-			</div><!-- end Design/Front End UI --->	
+			</div><!-- end Design/Front End UI -->	
 						
 		</div><!-- end  Accordion -->	
 		
@@ -426,8 +408,16 @@
 	</section><!-- end section layout-->
 </footer><!-- end footer -->
 
-
-	<script src="_/js/script.js"></script>
+  <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+  <script>
+    $(function() {
+      $( "#accordion" ).accordion({
+        heightStyle: "content"
+      });
+    });
+  </script>
+	<script src="assets/js/script.js"></script>
 	<script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
